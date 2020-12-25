@@ -43,9 +43,6 @@
   <div id="app">
     
       
-      <canvas width="1777" height="841"
-        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
-      
     <main class="content on">
       
 <section class="cover">
@@ -144,6 +141,58 @@
     
     
     <article
+  id="post-test："
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/12/25/test%EF%BC%9A/"
+    >happy chrismas</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/12/25/test%EF%BC%9A/" class="article-date">
+  <time datetime="2020-12-25T14:56:16.393Z" itemprop="datePublished">2020-12-25</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/chrismas/">chrismas</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="https://tse2-mm.cn.bing.net/th/id/OIP.QEe-I6218iRtR6Zk-1FSWAHaHa?pid=Api&rs=1" alt="hello"></p>
+<p>happy chrismas</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
   id="post-linux命令："
   class="article article-type-post"
   itemscope
@@ -171,7 +220,90 @@
   </div>
    
     </div>
+      
+    <div class="article-entry" itemprop="articleBody">
        
+  <p>linux命令：</p>
+<p>一、文件目录类相关指令</p>
+<p>pwd（当前路径）</p>
+<p>cd</p>
+<p>mkdir(默认只能创建一级目录)</p>
+<p>​    -p（创建多级目录）</p>
+<p>rmdir(不能删除非空目录)</p>
+<p>​    删除非空目录：rm -rf </p>
+<p>touch 文件名称（创建新文件，可以同时创建多个文件）</p>
+<p>​    touch hello.txt</p>
+<p>cp</p>
+<p>​    cp [选项] source dest</p>
+<p>​    cp  -r （递归复制整个文件夹）</p>
+<p>​    强制覆盖不提示 /cp</p>
+<p>rm（移除文件或目录）</p>
+<p>​    rm -rf(删除一个目录)</p>
+<p>​    -r 删除整个文件夹</p>
+<p>​    -f 强制删除不提醒</p>
+<p>mv（移动文件与目录或重命名）</p>
+<pre><code>  mv oldname newname（重命名）</code></pre>
+<p>cat（只读方式查看文件）</p>
+<p>​    cat 选项 文件名</p>
+<p>​    -n 带行号</p>
+<p>​     cat /etc/profile.txt | more (分页展示)</p>
+<p>​     <img src="C:\Users\Lsy\AppData\Roaming\Typora\typora-user-images\image-20201225153531202.png" alt="image-20201225153531202"></p>
+<p>less 指令（查看大文件，不是一次将大文件加载后才显示）</p>
+<p>​    </p>
+<img src="C:\Users\Lsy\AppData\Roaming\Typora\typora-user-images\image-20201225154053635.png" alt="image-20201225154053635"  />
+
+<p>‘&gt;’指令和’&gt;&gt;’指令(输出重定向，追加)</p>
+<p>​     ls-l &gt;a.txt(ls-l显示的内容覆盖写入到a.txt)</p>
+<p>​     ls -l &gt;&gt;b.txt(ls-l显示的内容 追加到b.txt)</p>
+<p>​    echo “内容” &gt;/&gt;&gt; 文件</p>
+<p>​     cal显示日历</p>
+<p>echo指令</p>
+<p>​    echo输出内容到控制台</p>
+<p>​    echo 选项 输入内容</p>
+<p>​    使用echo输入环境变量，输出当前的环境路径</p>
+<p>​    echo $path</p>
+<p>head指令（显示文件开头部分的内容）</p>
+<p>​    head 文件（查看文件头10行内容）</p>
+<p>​    head -n 5 文件（查看头5行）</p>
+<p>tail指令</p>
+<p>​    查看文件后10行</p>
+<p>​    -n </p>
+<p>​    tail -f文件（实时追踪文档的更新）</p>
+<p>ln 指令(软链接创建快捷方式)</p>
+<p>​    ln -s[原文件或目录] [软链接名]</p>
+<p>​    删除软链接 rm -rf  软连接名</p>
+<p>​    使用pwd命令时还是当前目录</p>
+<p>history 指令（显示执行过的历史指令）</p>
+<p>​    history 10 显示最近的十个</p>
+<p>​    执行历史指令 !编号</p>
+<p>二、时间日期相关指令</p>
+<p>date指令</p>
+<p>​    date</p>
+<p>​    date+%Y</p>
+<p>​    date+%m</p>
+<p>​    date+%d</p>
+<p>​    H M S时分秒</p>
+<p>​    eg: date “+%Y-%m-%d”     2020-12-25</p>
+<p>​    设置日期：</p>
+<p>​    date -s “2018-2-2 11:23:4”</p>
+<p>cal指令</p>
+<p>​    cal 显示当前日历</p>
+<p>​    cal 2020   显示2020整年</p>
+<p>三、搜索查找指令</p>
+<p>find指令</p>
+<p>​    find 范围 选项 </p>
+<p>​    按名查找 find /home -name hello.txt</p>
+<p>​    按文件的拥有者查找 -usr</p>
+<p>​    查找按大小 -size +20m </p>
+<p>​    大于：+ 小于：-     等于：直接写</p>
+<p>​    eg: find -size +20M(大写)</p>
+<p>locate指令</p>
+<p>​    </p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
 
     <!-- copyright -->
     
@@ -200,7 +332,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2019-2020
+        2020
         <i class="ri-heart-fill heart_icon"></i> lsy
       </li>
     </ul>
@@ -232,11 +364,6 @@
     </ul>
     <ul>
       
-      <li>
-          <img src="/images/beian.png"></img>
-          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" target="_black" rel="nofollow">浙公网安备01234567890123号</a>
-      </li>
-        
     </ul>
     <ul>
       <li>
@@ -365,113 +492,6 @@
 
 <!-- ImageViewer -->
 
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
-            }
-        })
-    }
-    viewer_init()
-</script>
-
 <!-- MathJax -->
 
 <script type="text/x-mathjax-config">
@@ -508,13 +528,13 @@
 
 <!-- ClickLove -->
 
+
+<script src="/js/clickLove.js"></script>
+
+
 <!-- ClickBoom1 -->
 
 <!-- ClickBoom2 -->
-
-
-<script src="/js/clickBoom2.js"></script>
-
 
 <!-- CodeCopy -->
 
