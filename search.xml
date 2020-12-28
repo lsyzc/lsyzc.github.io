@@ -3,9 +3,8 @@
   <entry>
     <title>linux 常用命令</title>
     <url>/2020/12/25/linux%E5%91%BD%E4%BB%A4%EF%BC%9A/</url>
-    <content><![CDATA[<p>linux命令：</p>
-<p>一、文件目录类相关指令</p>
-<p>pwd（当前路径）</p>
+    <content><![CDATA[<h1 id="linux基本命令："><a href="#linux基本命令：" class="headerlink" title="linux基本命令："></a>linux基本命令：</h1><hr>
+<h2 id="一、文件目录类相关指令"><a href="#一、文件目录类相关指令" class="headerlink" title="一、文件目录类相关指令"></a>一、文件目录类相关指令</h2><p>pwd（当前路径）</p>
 <p>cd</p>
 <p>mkdir(默认只能创建一级目录)</p>
 <p>​    -p（创建多级目录）</p>
@@ -22,16 +21,15 @@
 <p>​    -r 删除整个文件夹</p>
 <p>​    -f 强制删除不提醒</p>
 <p>mv（移动文件与目录或重命名）</p>
-<pre><code>  mv oldname newname（重命名）</code></pre>
+<p>mv oldname newname（重命名）</p>
 <p>cat（只读方式查看文件）</p>
 <p>​    cat 选项 文件名</p>
 <p>​    -n 带行号</p>
 <p>​     cat /etc/profile.txt | more (分页展示)</p>
-<p>​     <img src="C:\Users\Lsy\AppData\Roaming\Typora\typora-user-images\image-20201225153531202.png" alt="image-20201225153531202"></p>
+<p>​     <img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228164022.png" alt="image-20201225153531202"></p>
 <p>less 指令（查看大文件，不是一次将大文件加载后才显示）</p>
 <p>​    </p>
-<img src="C:\Users\Lsy\AppData\Roaming\Typora\typora-user-images\image-20201225154053635.png" alt="image-20201225154053635"  />
-
+<p><img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228164059.png"></p>
 <p>‘&gt;’指令和’&gt;&gt;’指令(输出重定向，追加)</p>
 <p>​     ls-l &gt;a.txt(ls-l显示的内容覆盖写入到a.txt)</p>
 <p>​     ls -l &gt;&gt;b.txt(ls-l显示的内容 追加到b.txt)</p>
@@ -56,8 +54,7 @@
 <p>history 指令（显示执行过的历史指令）</p>
 <p>​    history 10 显示最近的十个</p>
 <p>​    执行历史指令 !编号</p>
-<p>二、时间日期相关指令</p>
-<p>date指令</p>
+<h2 id="二、时间日期相关指令"><a href="#二、时间日期相关指令" class="headerlink" title="二、时间日期相关指令"></a>二、时间日期相关指令</h2><p>date指令</p>
 <p>​    date</p>
 <p>​    date+%Y</p>
 <p>​    date+%m</p>
@@ -69,8 +66,7 @@
 <p>cal指令</p>
 <p>​    cal 显示当前日历</p>
 <p>​    cal 2020   显示2020整年</p>
-<p>三、搜索查找指令</p>
-<p>find指令</p>
+<h2 id="三、搜索查找指令"><a href="#三、搜索查找指令" class="headerlink" title="三、搜索查找指令"></a>三、搜索查找指令</h2><p>find指令</p>
 <p>​    find 范围 选项 </p>
 <p>​    按名查找 find /home -name hello.txt</p>
 <p>​    按文件的拥有者查找 -usr</p>
@@ -78,10 +74,141 @@
 <p>​    大于：+ 小于：-     等于：直接写</p>
 <p>​    eg: find -size +20M(大写)</p>
 <p>locate指令</p>
+<p>​    locate搜索文件 第一次运行前更新数据库 updatedb</p>
+<p>grep指令</p>
+<p>​    过滤查找，管道符 | 将前一个命令的处理结果传递给后一个命令处理</p>
+<p>​    基本语法：grep [选项] 查找内容 源文件</p>
+<p>​    -n 显示匹配行及符号</p>
+<p>​    -i 忽略字母大小写</p>
+<p>​    eg: 请在hello.txt文件中，查找“yes”所在行，并显示行号</p>
+<p>​            cat hello.txt | grep -n yes</p>
+<h2 id="四、解压缩命令"><a href="#四、解压缩命令" class="headerlink" title="四、解压缩命令"></a>四、解压缩命令</h2><p>gzip 和gunzip</p>
+<p>​    eg: gzip hello.txt   -&gt; hello.txt.gz</p>
+<p>​    使用gzip压缩后不会保留原来的文件</p>
+<p>zip 和 unzip</p>
+<p>​    zip [选项] xxx.zip 将要压缩的内容</p>
+<p>​        -r 递归压缩，即压缩目录</p>
+<p>​    unzip：</p>
+<p>​        -d&lt;目录&gt; 指定解压后文件的存放目录</p>
+<p>​    eg: 将/home下的所有压缩成mypackage.zip</p>
+<p>tar指令</p>
+<p><img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228163906.png" alt="image-20201225175704923"></p>
 <p>​    </p>
+<p>​    example: tar -zcvf a.tar.gz  a1.txt a2.txt（把a1.txt 和a2.txt压缩为a.tar.gz）</p>
+<p>​                      tar -zcvf myhom.tar.gz /home （将/home文件夹整体打包）</p>
+<p>​                        tar -zxvg a.tar.gz（解压到当前目录）</p>
+<p>​                        tar -zxvg a.tar.gz -C /opt（解压到opt目录 存在的目录）</p>
+<h1 id="linux实操"><a href="#linux实操" class="headerlink" title="linux实操"></a>linux实操</h1><hr>
+<h2 id="组"><a href="#组" class="headerlink" title="组"></a>组</h2><ol>
+<li><p>组的创建</p>
+<ol>
+<li>groupadd police（创建police组）</li>
+<li>useradd -g police tom（创建tom用户到police 组）</li>
+</ol>
+</li>
+<li><p>查看文件/目录所在组</p>
+<p>ls -ahl</p>
+</li>
+<li><p>修改文件所在的组</p>
+<ul>
+<li><p>chgrp 组名 文件名</p>
+<p>应用实例：</p>
+<p>使用root用户创建文件 orange.txt，看看当前这个文件属于哪个组，然后将这个文件所在组修改到police组。</p>
+<p>chgrp police orange.txt</p>
+</li>
+</ul>
+</li>
+<li><p>修改文件的所有者</p>
+<ul>
+<li>chown 用户名 文件名</li>
+</ul>
+</li>
+<li><p>改变用户所在组（用root的管理权限）</p>
+<p>在添加用户时，可以指定该用户添加到哪个组中，同样用root的管理权限可以改变某个用户所在的组。<br>改变用户所在的组：</p>
+<ul>
+<li><p>usermod -g 组名 用户名</p>
+</li>
+<li><p>usrmod -d 目录名 用户名 改变用户登录的初始目录</p>
+<blockquote>
+<p>//example</p>
+<ul>
+<li><p>创建一个bandit组，将在police组的tom用户更改到bandit组。</p>
+<p>​    groupadd bandit</p>
+<p>​    usermod -g bandit tom</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h2><blockquote>
+<img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228150807.png" style="zoom:50%;" />
+</blockquote>
+<blockquote>
+<img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228145607.png"  />
+</blockquote>
+<blockquote>
+<p>rwx权限详解</p>
+<img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228150224.png" style="zoom:50%;" />
+</blockquote>
+<blockquote>
+<p><img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228151356.png"></p>
+</blockquote>
+<h3 id="权限的管理"><a href="#权限的管理" class="headerlink" title="权限的管理"></a>权限的管理</h3><p>   通过chmod指令可以修改文件或目录的权限</p>
+<ol>
+<li><p>通过+,-,=修改</p>
+<blockquote>
+<p>u-&gt;所有者        g-&gt;所在组        o-&gt;其他组        a-&gt;所有（u+g+o）</p>
+<p>w-&gt;写        r-&gt;读        x-&gt;可执行</p>
+<p>example:</p>
+<ul>
+<li>chmod u=rxw,g=rx,o=x 文件或目录名</li>
+<li>chmod o+w 文件或目录名</li>
+<li>chmod a-x 文件或目录名</li>
+</ul>
+</blockquote>
+</li>
+<li><p>通过数字变更权限</p>
+<blockquote>
+<p>r=4        w=2        x=1</p>
+<p>usr group other</p>
+<p>chmod 771 file</p>
+</blockquote>
+<h3 id="修改文件的所有者"><a href="#修改文件的所有者" class="headerlink" title="修改文件的所有者"></a>修改文件的所有者</h3></li>
+</ol>
+<p>chown newowner file</p>
+<p>chown newowner:newgroup file</p>
+<p>-R递归修改文件夹下所有文件的所有者</p>
+<p>chown -R tom kkk/</p>
+<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><blockquote>
+<p><img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228160604.png"></p>
+<p>groupadd police</p>
+<p>groupadd bandit</p>
+<p>useradd -g police jack</p>
+<p>useradd -g police jerry</p>
+<p>useradd -g bandit xh</p>
+<p>useradd -g bandit xq</p>
+<blockquote>
+<p>jack:</p>
+<p>touch hello.txt</p>
+<p>chmod o=rw,g=r</p>
+<p>chmod o=r,g=rw</p>
+</blockquote>
+<blockquote>
+<p>xh投靠警察</p>
+<ul>
+<li><p>更改xh所在组为police</p>
+<p>usermod -g police xh</p>
+</li>
+<li><p>jack更改组的权限为rw</p>
+</li>
+</ul>
+</blockquote>
+</blockquote>
 ]]></content>
       <categories>
-        <category>“大数据 ”</category>
+        <category>linux</category>
       </categories>
       <tags>
         <tag>linux</tag>
