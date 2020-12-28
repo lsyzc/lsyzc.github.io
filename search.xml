@@ -26,10 +26,10 @@
 <p>​    cat 选项 文件名</p>
 <p>​    -n 带行号</p>
 <p>​     cat /etc/profile.txt | more (分页展示)</p>
-<p>​     <img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228164022.png" alt="image-20201225153531202"></p>
+<p>​     <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228164022.png" alt="image-20201225153531202"></p>
 <p>less 指令（查看大文件，不是一次将大文件加载后才显示）</p>
 <p>​    </p>
-<p><img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228164059.png"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228164059.png"></p>
 <p>‘&gt;’指令和’&gt;&gt;’指令(输出重定向，追加)</p>
 <p>​     ls-l &gt;a.txt(ls-l显示的内容覆盖写入到a.txt)</p>
 <p>​     ls -l &gt;&gt;b.txt(ls-l显示的内容 追加到b.txt)</p>
@@ -92,7 +92,7 @@
 <p>​        -d&lt;目录&gt; 指定解压后文件的存放目录</p>
 <p>​    eg: 将/home下的所有压缩成mypackage.zip</p>
 <p>tar指令</p>
-<p><img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228163906.png" alt="image-20201225175704923"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228163906.png" alt="image-20201225175704923"></p>
 <p>​    </p>
 <p>​    example: tar -zcvf a.tar.gz  a1.txt a2.txt（把a1.txt 和a2.txt压缩为a.tar.gz）</p>
 <p>​                      tar -zcvf myhom.tar.gz /home （将/home文件夹整体打包）</p>
@@ -143,17 +143,17 @@
 </li>
 </ol>
 <h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h2><blockquote>
-<img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228150807.png" style="zoom:50%;" />
+<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228150807.png" style="zoom:50%;" />
 </blockquote>
 <blockquote>
-<img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228145607.png"  />
+<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228145607.png"  />
 </blockquote>
 <blockquote>
 <p>rwx权限详解</p>
-<img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228150224.png" style="zoom:50%;" />
+<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228150224.png" style="zoom:50%;" />
 </blockquote>
 <blockquote>
-<p><img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228151356.png"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228151356.png"></p>
 </blockquote>
 <h3 id="权限的管理"><a href="#权限的管理" class="headerlink" title="权限的管理"></a>权限的管理</h3><p>   通过chmod指令可以修改文件或目录的权限</p>
 <ol>
@@ -182,7 +182,7 @@
 <p>-R递归修改文件夹下所有文件的所有者</p>
 <p>chown -R tom kkk/</p>
 <h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><blockquote>
-<p><img src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228160604.png"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/lsyzc/mypicture/raw/master/imag/20201228160604.png"></p>
 <p>groupadd police</p>
 <p>groupadd bandit</p>
 <p>useradd -g police jack</p>
