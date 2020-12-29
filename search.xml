@@ -3,7 +3,7 @@
   <entry>
     <title>linux 常用命令</title>
     <url>/2020/12/25/linux%E5%91%BD%E4%BB%A4%EF%BC%9A/</url>
-    <content><![CDATA[<h1 id="linux基本命令："><a href="#linux基本命令：" class="headerlink" title="linux基本命令："></a>linux基本命令：</h1><hr>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="linux基本命令："><a href="#linux基本命令：" class="headerlink" title="linux基本命令："></a>linux基本命令：</h1><hr>
 <h2 id="一、文件目录类相关指令"><a href="#一、文件目录类相关指令" class="headerlink" title="一、文件目录类相关指令"></a>一、文件目录类相关指令</h2><p>pwd（当前路径）</p>
 <p>cd</p>
 <p>mkdir(默认只能创建一级目录)</p>
@@ -217,7 +217,7 @@
   <entry>
     <title>happy chrismas</title>
     <url>/2020/12/25/test%EF%BC%9A/</url>
-    <content><![CDATA[<p><img src= "/img/loading.gif" data-lazy-src="https://tse2-mm.cn.bing.net/th/id/OIP.QEe-I6218iRtR6Zk-1FSWAHaHa?pid=Api&rs=1" alt="hello"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src= "/img/loading.gif" data-lazy-src="https://tse2-mm.cn.bing.net/th/id/OIP.QEe-I6218iRtR6Zk-1FSWAHaHa?pid=Api&rs=1" alt="hello"></p>
 <p>happy chrismas</p>
 ]]></content>
       <categories>
