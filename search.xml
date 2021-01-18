@@ -224,4 +224,99 @@
         <tag>linux</tag>
       </tags>
   </entry>
+  <entry>
+    <title>javaSE</title>
+    <url>/2021/01/18/javase/</url>
+    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">使用Arrays相关API，将一个随机字符串中的所有字符升序排列，并倒序打印</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArraysTest</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String [] args)</span></span>&#123;</span><br><span class="line">        String str=<span class="string">&quot;ajdflakjdflakjsdfaklsddfj&quot;</span>;</span><br><span class="line">        <span class="keyword">char</span> [] chars=str.toCharArry();</span><br><span class="line">        Arrays.sort(chars);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=chars.length()-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">            System.out.println(chars[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">super的使用：</span></span><br><span class="line"><span class="comment">	1.在子类成员方法中，访问父类的成员变量。</span></span><br><span class="line"><span class="comment">	2.---------------------------方法。</span></span><br><span class="line"><span class="comment">	3.在子类的构造方法中访问父类的构造方法。</span></span><br><span class="line"><span class="comment">this关键字的用法：</span></span><br><span class="line"><span class="comment">    1.在本类的成员方法中访问本类的成员变量。</span></span><br><span class="line"><span class="comment">    2.在本类的成员方法中访问本类的另一个成员方法</span></span><br><span class="line"><span class="comment">    3.在本类的构造方法中访问本类的另一个构造方法（调用也必须是构造方法的第一个语句，super和this两种构造调用不能同时使用）</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">抽象方法：</span></span><br><span class="line"><span class="comment">	不知到具体的实现方法</span></span><br><span class="line"><span class="comment">	public abstarct void eat();//去掉大括号</span></span><br><span class="line"><span class="comment">	抽象方法所在的类必须是抽象类 </span></span><br><span class="line"><span class="comment">	public abstract class Animal&#123;&#125;</span></span><br><span class="line"><span class="comment">抽象类的使用：</span></span><br><span class="line"><span class="comment">	1.抽象类不可以直接创建对象</span></span><br><span class="line"><span class="comment">	2.必须有一个子类来继承抽象父类</span></span><br><span class="line"><span class="comment">	3.子类必须重写父类中的所有抽象方法（子类去掉父类方法中的abstract并补上方法体）</span></span><br><span class="line"><span class="comment">	4.创建子类对象并使用。</span></span><br><span class="line"><span class="comment">注意事项：</span></span><br><span class="line"><span class="comment">	1.抽象类中不一定有抽象方法，但有抽象方法的一定是抽象类</span></span><br><span class="line"><span class="comment">	（不行让调用者使用该类）</span></span><br><span class="line"><span class="comment">	2.抽象类的子类必须重写所有抽象方法除非该子类也是抽象类</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*接口：</span></span><br><span class="line"><span class="comment">注意事项：</span></span><br><span class="line"><span class="comment">	1.没有静态代码块和构造方法</span></span><br><span class="line"><span class="comment">	2.一个类可以实现多个接口</span></span><br><span class="line"><span class="comment">	3.一个实现类实现多个接口，有相同的默认方法，必须对默认方法进行重写</span></span><br><span class="line"><span class="comment">	4.一个实现类实现多个接口，有相同的抽象方法，只用实现一个即可</span></span><br><span class="line"><span class="comment">	5.一个类的直接父类的方法和接口中的默认方法冲突，优先用父类中的方法</span></span><br><span class="line"><span class="comment">	6.接口之间可以多继承</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">public interface 接口名称 &#123;&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">接口中可以有常量，抽象方法，（default默认方法，private方法，静态方法）</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">默认方法：定义时需要有方法体，可以在实现类中重写默认方法</span></span><br><span class="line"><span class="comment">静态方法：static void 名称&#123;&#125;</span></span><br><span class="line"><span class="comment">		不能通过实现类对象调用</span></span><br><span class="line"><span class="comment">        正确使用：接口名称.静态方法（）</span></span><br><span class="line"><span class="comment">private方法：抽取一个公共方法，解决俩个默认方法/多个静态方法中重复代码的问题。</span></span><br><span class="line"><span class="comment">(java9)            但是此公共方法不应该让实现类使用，应该是私有化的</span></span><br><span class="line"><span class="comment">            如果重复代码是静态方法中的用私有的静态方法解决：</span></span><br><span class="line"><span class="comment">            	private static void methondCommon()&#123;&#125;</span></span><br><span class="line"><span class="comment">常量：public static final 数据类型 常量名称=数据值;</span></span><br><span class="line"><span class="comment">	 常量名称完全大写，用下划线分离开</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Myinterface</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">default</span> <span class="keyword">void</span> <span class="title">methodDefault1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;默认方法A&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;3&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    public interface Myinterface&#123;</span></span><br><span class="line"><span class="comment">        public default void methodDefault1()&#123;</span></span><br><span class="line"><span class="comment">        System.out.println(&quot;默认方法A&quot;);</span></span><br><span class="line"><span class="comment">        methodCommon();</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">default</span> <span class="keyword">void</span> <span class="title">methodDefault1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;默认方法B&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;3&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">    public interface Myinterface&#123;</span></span><br><span class="line"><span class="comment">        public default void methodDefault1()&#123;</span></span><br><span class="line"><span class="comment">        System.out.println(&quot;默认方法B&quot;);</span></span><br><span class="line"><span class="comment">        methodCommon();</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">methondCommon</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;3&quot;</span>);</span><br><span class="line">    &#125;<span class="comment">//private 方法实现重复代码复用</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">            </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">多态：</span></span><br><span class="line"><span class="comment">父类型名 对象名 = new 子类名();</span></span><br><span class="line"><span class="comment">1.对于父类中的方法如果子类重写，则调用时调用的为子类重写的方法</span></span><br><span class="line"><span class="comment">2.不能调用子类中独有的方法</span></span><br><span class="line"><span class="comment">3.变量不能重写，访问变量的方法有两种&#123;通过对象名.变量名，通过方法调用&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h2><p>1.修饰类：被修饰的类不能再有子类</p>
+<p>2.修饰成员方法：此方法不能再被重写</p>
+<p>3.修饰局部变量: </p>
+<ul>
+<li>基本数据类型：不可变指的是变量中的数据不可变</li>
+<li>引用数据类型：不可变指的是变量中的地址不可变，内容可变</li>
+</ul>
+<p>4.修饰成员变量：</p>
+<ul>
+<li>由于成员变量具有默认值，因此用final修饰必须赋予初始值，要么直接赋值要么通过构造方法赋值。</li>
+<li>如果通过构造方法赋值，那么所有的重载构造方法都要对final修饰的成员变量赋值</li>
+</ul>
+<h2 id="四种权限修饰符"><a href="#四种权限修饰符" class="headerlink" title="四种权限修饰符"></a>四种权限修饰符</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>public</th>
+<th>protected</th>
+<th>(default)</th>
+<th>private</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>同一个类</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>同一个包</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>不同包子类</td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>不同包不是子类</td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody></table>
+<h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><p>内部类：</p>
+<ol>
+<li><p>成员内部类</p>
+<p>成员内部类的使用方法：</p>
+<ul>
+<li>间接方法：在外部类的方法中使用内部类，在main方法中只调用外部类的方法</li>
+<li>直接方法：创建内部类对象【外部类名称 对象名 = new 外部类类名称().new 内部类名称();】</li>
+</ul>
+<p>内部类和外部类重名：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num=<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">public</span> Iner&#123;</span><br><span class="line">        <span class="keyword">int</span> num=<span class="number">20</span>;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methonIner</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">int</span> num=<span class="number">30</span>;</span><br><span class="line">            System.out.println(num);<span class="comment">//30</span></span><br><span class="line">            System.out.println(<span class="keyword">this</span>.num);<span class="comment">//20</span></span><br><span class="line">            System.out.println(Outer.<span class="keyword">this</span>.num);<span class="comment">//10</span></span><br><span class="line">        &#125;</span><br><span class="line">      </span><br><span class="line">       </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>局部内部类(匿名内部类)</p>
+<p>定义在方法内部中的类，只有当前所属的方法才能使用，出了此方法将不能在使用。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodOuter</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="class"><span class="keyword">class</span> <span class="title">Inner</span></span>&#123;</span><br><span class="line">            <span class="keyword">int</span> num=<span class="number">10</span>;<span class="comment">//必须是常量！！！！final</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodInner</span><span class="params">()</span></span>&#123;</span><br><span class="line">                System.out.println(num);<span class="comment">//10</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Inner inner = <span class="keyword">new</span> Inner();</span><br><span class="line">        inner.methodInner();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">注意：</span></span><br><span class="line"><span class="comment">定义一个类时，修饰符规则：</span></span><br><span class="line"><span class="comment">1.外部类：public/(default)</span></span><br><span class="line"><span class="comment">2.成员内部类：都可以</span></span><br><span class="line"><span class="comment">3.局部内部类：default</span></span><br></pre></td></tr></table></figure>
+<p>匿名内部类：（省去了接口实现创建实现类）只能使用一次</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//定义一个接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Myinterface</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="title">method</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//实现类的定义</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Myinterfaceimpl</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;实现接口&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Mainmethod</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Myinterface obi = <span class="keyword">new</span> Myinterfaceimpl();</span><br><span class="line">        <span class="comment">//可以改为使用内部类来省去建立实现类</span></span><br><span class="line">        Myinterface obj2= <span class="keyword">new</span> Myinterface() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;匿名内部类实现接口&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2></li>
+<li><p>toString    方法重写</p>
+</li>
+<li><p>equals(Object中是引用类型比较地址)       方法重写(隐含多态问题，需要用到上转型对象)</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    String age;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(obj <span class="keyword">instanceof</span> Person)</span><br><span class="line">        &#123;</span><br><span class="line">            Person p=(Person) obj;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.name.equals(p.name)&amp;&amp;(<span class="keyword">this</span>.age.equals(p.age)))</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
 </search>
