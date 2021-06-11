@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title>Namenode无法启动</title>
     <url>/2021/02/20/hadoop/</url>
-    <content><![CDATA[<blockquote>
+    <content><![CDATA[<h2 id="hadoop遇到的小问题"><a href="#hadoop遇到的小问题" class="headerlink" title="hadoop遇到的小问题"></a>hadoop遇到的小问题</h2><blockquote>
 <p>问题：</p>
 <p>当我们使用hadoop namenode -format格式化namenode时，会在namenode数据文件夹（这个文件夹为自己配置文件中dfs.name.dir的路径）中保存一个current/VERSION文件，记录clusterID，datanode中保存的current/VERSION文件中的clustreID的值是上一次格式化保存的clusterID，这样，datanode和namenode之间的ID不一致。</p>
 <h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ul>
@@ -84,6 +84,9 @@
 </ul>
 </blockquote>
 ]]></content>
+      <tags>
+        <tag>hadoop</tag>
+      </tags>
   </entry>
   <entry>
     <title>javaSE</title>
