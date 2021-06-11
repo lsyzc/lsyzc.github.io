@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>二分查找python | LsyZc</title><meta name="keywords" content="算法"><meta name="author" content="lsy"><meta name="copyright" content="lsy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="二分查找1234567891011121314151617def binary_search(arr,item):	head&#x3D;0	tail&#x3D;len(arr)-1	while(head&lt;&#x3D;tail):		mid&#x3D;math.floor((head+tail)&#x2F;2)		guess&#x3D;arr[mid]		if guess&#x3D;&#x3D;item:			return mid		if guess&lt;item:">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>二分查找python | LsyZc</title><meta name="keywords" content="算法"><meta name="author" content="lsy"><meta name="copyright" content="lsy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="二分查找1234567891011121314151617def binary_search(arr,item):	head&#x3D;0	tail&#x3D;len(arr)-1	while(head&lt;&#x3D;tail):		mid&#x3D;math.floor((head+tail)&#x2F;2)		guess&#x3D;arr[mid]		if guess&#x3D;&#x3D;item:			return mid		if guess&lt;item:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二分查找python">
 <meta property="og:url" content="http://lsyzc.tk/2021/01/18/%E7%AE%97%E6%B3%95/index.html">
@@ -125,7 +125,7 @@ const getScript = url => new Promise((resolve, reject) => {
       document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
     }
   }
-  const autoChangeMode = '2'
+  const autoChangeMode = 'false'
   const t = saveToLocal.get('theme')
   if (autoChangeMode === '1') {
     const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches

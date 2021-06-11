@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Namenode无法启动 | LsyZc</title><meta name="keywords" content="hadoop"><meta name="author" content="lsy"><meta name="copyright" content="lsy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="hadoop遇到的小问题 问题： 当我们使用hadoop namenode -format格式化namenode时，会在namenode数据文件夹（这个文件夹为自己配置文件中dfs.name.dir的路径）中保存一个current&#x2F;VERSION文件，记录clusterID，datanode中保存的current&#x2F;VERSION文件中的clustreID的值是上一次格式化保存的clusterID，">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Namenode无法启动 | LsyZc</title><meta name="keywords" content="hadoop"><meta name="author" content="lsy"><meta name="copyright" content="lsy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="hadoop遇到的小问题 问题： 当我们使用hadoop namenode -format格式化namenode时，会在namenode数据文件夹（这个文件夹为自己配置文件中dfs.name.dir的路径）中保存一个current&#x2F;VERSION文件，记录clusterID，datanode中保存的current&#x2F;VERSION文件中的clustreID的值是上一次格式化保存的clusterID，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Namenode无法启动">
 <meta property="og:url" content="http://lsyzc.tk/2021/02/20/hadoop/index.html">
@@ -125,7 +125,7 @@ const getScript = url => new Promise((resolve, reject) => {
       document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
     }
   }
-  const autoChangeMode = '2'
+  const autoChangeMode = 'false'
   const t = saveToLocal.get('theme')
   if (autoChangeMode === '1') {
     const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
