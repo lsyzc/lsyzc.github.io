@@ -4,7 +4,7 @@
         <title>Anthony Fu</title>
         <link>https://antfu.me/</link>
         <description>Anthony Fu' Blog</description>
-        <lastBuildDate>Sat, 18 Oct 2025 12:01:02 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 18 Oct 2025 12:07:17 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -14,6 +14,25 @@
         </image>
         <copyright>CC BY-NC-SA 4.0 2021 © Anthony Fu</copyright>
         <atom:link href="https://antfu.me/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[testogupdate]]></title>
+            <link>https://antfu.me/posts/test-og-update</link>
+            <guid isPermaLink="true">https://antfu.me/posts/test-og-update</guid>
+            <pubDate>Sat, 18 Oct 2025 19:30:00 GMT</pubDate>
+            <content:encoded><![CDATA[<p>[[toc]]</p>
+<h1>Test</h1>
+<h1>H2</h1>
+<h1>H3</h1>
+<p><code important-text-red>hello</code></p>
+<p>Nice To meet you!<br>
+<a href="https://www.pseudoyu.com/posts/weekly_review_89">Pseudo</a><br>
+Good AfterNoon</p>
+<div mb-10>
+<PhotoSlideTemplate class="gap-1!"/>
+</div>
+<YouTubeEmbed id="0Bh6HBiebfY" noScale/>]]></content:encoded>
+            <author>hi@antfu.me (Anthony Fu)</author>
+        </item>
         <item>
             <title><![CDATA[TestSecond]]></title>
             <link>https://antfu.me/posts/testsecond</link>

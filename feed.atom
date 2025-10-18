@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://antfu.me/</id>
     <title>Anthony Fu</title>
-    <updated>2025-10-18T12:01:02.425Z</updated>
+    <updated>2025-10-18T12:07:17.155Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Anthony Fu</name>
@@ -15,6 +15,29 @@
     <logo>https://antfu.me/avatar.png</logo>
     <icon>https://antfu.me/logo.png</icon>
     <rights>CC BY-NC-SA 4.0 2021 © Anthony Fu</rights>
+    <entry>
+        <title type="html"><![CDATA[testogupdate]]></title>
+        <id>https://antfu.me/posts/test-og-update</id>
+        <link href="https://antfu.me/posts/test-og-update"/>
+        <updated>2025-10-18T19:30:00.000Z</updated>
+        <content type="html"><![CDATA[<p>[[toc]]</p>
+<h1>Test</h1>
+<h1>H2</h1>
+<h1>H3</h1>
+<p><code important-text-red>hello</code></p>
+<p>Nice To meet you!<br>
+<a href="https://www.pseudoyu.com/posts/weekly_review_89">Pseudo</a><br>
+Good AfterNoon</p>
+<div mb-10>
+<PhotoSlideTemplate class="gap-1!"/>
+</div>
+<YouTubeEmbed id="0Bh6HBiebfY" noScale/>]]></content>
+        <author>
+            <name>Anthony Fu</name>
+            <email>hi@antfu.me</email>
+            <uri>https://antfu.me</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[TestSecond]]></title>
         <id>https://antfu.me/posts/testsecond</id>
