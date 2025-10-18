@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="675" fill="none"
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="linear-gradient(135deg, #f6d365 0%, #fda085 100%)" />
+
+  <!-- 标题文本 -->
+  <text x="50" y="300" font-size="60" font-family="Inter, sans-serif" fill="white" font-weight="bold">
+    {{line1}}
+  </text>
+
+  <!-- 作者 -->
+  <text x="50" y="500" font-size="36" font-family="Inter, sans-serif" fill="white">
+    {{line2}}
+  </text>
+</svg>
