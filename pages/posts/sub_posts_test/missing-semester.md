@@ -1,4 +1,5 @@
 ---
 title: missing-semester
-redirect: https://missing-semester-cn.github.io/
+date: 2025/10/18
+redirect: https://missing-semester-cn.github.io
 ---

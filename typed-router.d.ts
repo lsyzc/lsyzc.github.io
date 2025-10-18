@@ -27,7 +27,6 @@ declare module 'vue-router/auto-routes' {
     '/collective-sponsor-onetime': RouteRecordInfo<'/collective-sponsor-onetime', '/collective-sponsor-onetime', Record<never, never>, Record<never, never>>,
     '/demos': RouteRecordInfo<'/demos', '/demos', Record<never, never>, Record<never, never>>,
     '/giving-talks': RouteRecordInfo<'/giving-talks', '/giving-talks', Record<never, never>, Record<never, never>>,
-    '/leetcode': RouteRecordInfo<'/leetcode', '/leetcode', Record<never, never>, Record<never, never>>,
     '/media': RouteRecordInfo<'/media', '/media', Record<never, never>, Record<never, never>>,
     '/notes': RouteRecordInfo<'/notes', '/notes', Record<never, never>, Record<never, never>>,
     '/photos': RouteRecordInfo<'/photos', '/photos', Record<never, never>, Record<never, never>>,
@@ -35,11 +34,13 @@ declare module 'vue-router/auto-routes' {
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/github-alerts': RouteRecordInfo<'/posts/github-alerts', '/posts/github-alerts', Record<never, never>, Record<never, never>>,
     '/posts/github-co-authors': RouteRecordInfo<'/posts/github-co-authors', '/posts/github-co-authors', Record<never, never>, Record<never, never>>,
+    '/posts/leetcode/': RouteRecordInfo<'/posts/leetcode/', '/posts/leetcode', Record<never, never>, Record<never, never>>,
     '/posts/leetcode/lc01': RouteRecordInfo<'/posts/leetcode/lc01', '/posts/leetcode/lc01', Record<never, never>, Record<never, never>>,
     '/posts/photos-page': RouteRecordInfo<'/posts/photos-page', '/posts/photos-page', Record<never, never>, Record<never, never>>,
     '/posts/sub_posts_test/inner': RouteRecordInfo<'/posts/sub_posts_test/inner', '/posts/sub_posts_test/inner', Record<never, never>, Record<never, never>>,
     '/posts/sub_posts_test/missing-semester': RouteRecordInfo<'/posts/sub_posts_test/missing-semester', '/posts/sub_posts_test/missing-semester', Record<never, never>, Record<never, never>>,
     '/posts/test': RouteRecordInfo<'/posts/test', '/posts/test', Record<never, never>, Record<never, never>>,
+    '/posts/test-og-update': RouteRecordInfo<'/posts/test-og-update', '/posts/test-og-update', Record<never, never>, Record<never, never>>,
     '/posts/testsecond': RouteRecordInfo<'/posts/testsecond', '/posts/testsecond', Record<never, never>, Record<never, never>>,
     '/posts/windicss-and-tailwind-jit': RouteRecordInfo<'/posts/windicss-and-tailwind-jit', '/posts/windicss-and-tailwind-jit', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
@@ -96,10 +97,6 @@ declare module 'vue-router/auto-routes' {
       routes: '/giving-talks'
       views: never
     }
-    'pages/leetcode.md': {
-      routes: '/leetcode'
-      views: never
-    }
     'pages/media.md': {
       routes: '/media'
       views: never
@@ -128,6 +125,10 @@ declare module 'vue-router/auto-routes' {
       routes: '/posts/github-co-authors'
       views: never
     }
+    'pages/posts/leetcode/index.md': {
+      routes: '/posts/leetcode/'
+      views: never
+    }
     'pages/posts/leetcode/lc01.md': {
       routes: '/posts/leetcode/lc01'
       views: never
@@ -146,6 +147,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/test.md': {
       routes: '/posts/test'
+      views: never
+    }
+    'pages/posts/test-og-update.md': {
+      routes: '/posts/test-og-update'
       views: never
     }
     'pages/posts/testsecond.md': {
