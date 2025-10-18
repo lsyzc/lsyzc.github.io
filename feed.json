@@ -1,0 +1,75 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Anthony Fu",
+    "home_page_url": "https://antfu.me/",
+    "feed_url": "https://antfu.me/feed.json",
+    "description": "Anthony Fu' Blog",
+    "icon": "https://antfu.me/avatar.png",
+    "author": {
+        "name": "Anthony Fu",
+        "url": "https://antfu.me"
+    },
+    "items": [
+        {
+            "content_html": "<p>[[toc]]</p>\n<h1>Test</h1>\n<h1>H2</h1>\n<h1>H3</h1>\n<p><code important-text-red>hello</code></p>\n<p>Nice To meet you!<br>\n<a href=\"https://www.pseudoyu.com/posts/weekly_review_89\">Pseudo</a><br>\nGood AfterNoon</p>\n<div mb-10>\n<PhotoSlideTemplate class=\"gap-1!\"/>\n</div>\n<!-- <YouTubeEmbed id=\"0Bh6HBiebfY\" noScale/> -->",
+            "url": "https://antfu.me/posts/testsecond",
+            "title": "TestSecond",
+            "date_modified": "2025-10-18T14:40:00.000Z",
+            "author": {
+                "name": "Anthony Fu",
+                "url": "https://antfu.me"
+            }
+        },
+        {
+            "content_html": "<p>[[toc]]</p>\n<h1>Test</h1>\n<h1>H2</h1>\n<h1>H3</h1>\n<p><code important-text-red>hello</code></p>\n<p>Nice To meet you!<br>\n<a href=\"https://www.pseudoyu.com/posts/weekly_review_89\">Pseudo</a><br>\nGood AfterNoon</p>\n<div mb-10>\n<PhotoSlideTemplate class=\"gap-1!\"/>\n</div>\n<YouTubeEmbed id=\"0Bh6HBiebfY\" noScale/>",
+            "url": "https://antfu.me/posts/test",
+            "title": "hei",
+            "date_modified": "2025-10-17T14:30:00.000Z",
+            "author": {
+                "name": "Anthony Fu",
+                "url": "https://antfu.me"
+            }
+        },
+        {
+            "content_html": "<p>As you might have noticed, I added a <a href=\"/photos\">photos page</a> on this site recently. It's something I wanted to do for a very long time but always procrastinated on.</p>\n<p>During certain periods of my life, photography was my greatest passion, just as much as I do today with Open Source and programming. Instagram was once a delightful, minimalist platform for photo sharing that I frequently used - until Meta's acquisition changed everything. While I could even tolerate the algorithms, ads, and short videos, the recent <a href=\"https://www.standard.co.uk/news/tech/instagram-update-how-adjust-profile-grid-what-changes-coming-b1205890.html\">change of profile photo grids' aspect ratio from square to 4:5</a> was the final straw - an arrogant decision that impacts every user's content without providing proper solutions.</p>\n<p>I am not sure if anger or disappointment are the right words to describe my feelings. But I'm certainly lucky to be a frontend developer - so I can leverage my skills to build my own website and host my photos here.</p>\n<p>I <a href=\"https://accountscenter.instagram.com/info_and_permissions/dyi/\">requested to download all my data from Instagram</a> (it took roughly a day to process in my case), and imported them to the website. Thankfully, the downloaded data was relatively easy to process, with photos dating back to 2015. I use <a href=\"https://github.com/lovell/sharp\"><code>sharp</code></a> to process the images and compress them with <a href=\"https://github.com/antfu/antfu.me/blob/main/scripts/photos-manage.ts\">this script</a>. This automation helps me manage the photos without worrying about image sizes for hosting.</p>\n<p>Looking through these old photos brings back so many memories. While some may not meet my current standards - and I admittedly feel a bit embarrassed sharing them - they hold too many precious memories to leave behind. So I decided to keep most of them - hope you won't look too closely at them :P</p>\n<p>Here are some of <a href=\"/photos\">my recent photos</a>:</p>\n<div mb-10>\n  <PhotoGalleryAll :limit=\"12\" class=\"gap-1!\" />\n</div>\n<p>It's a shame that the image quality from Instagram isn't great, since they compress photos heavily upon posting. I might replace some of them with higher quality originals in the future, but for now, I think it's a good start.</p>\n<p>That said, I hope to get back into regularly sharing photos (as I keep saying 😅), especially now that I have my own platform for it.</p>\n<p>Thanks for reading! And I hope you find <a href=\"/photos\">my photos</a> interesting. Cheese 🧀!</p>\n",
+            "url": "https://antfu.me/posts/photos-page",
+            "title": "Photos Page",
+            "date_modified": "2025-03-12T12:00:00.000Z",
+            "author": {
+                "name": "Anthony Fu",
+                "url": "https://antfu.me"
+            }
+        },
+        {
+            "content_html": "<blockquote>\n<p>[!TIP]<br>\nJust a quick tip, that you can use <code>&gt; [!TIP]</code> to create<br>\na GitHub-style alert in your <a href=\"http://README.md\">README.md</a> like this.</p>\n</blockquote>\n<pre><code class=\"language-md\">&gt; [!TIP]\n&gt; Just a quick tip, that you can use `&gt; [!TIP]` to create\n&gt; a GitHub-style alert in your README.md like this.\n</code></pre>\n<p>The original <a href=\"https://github.com/orgs/community/discussions/16925\">GitHub proposal is here</a>. It's rolled out basically everywhere on GitHub now.</p>\n<h2>Use it in your website</h2>\n<p>And in case you like it, and wanted to use it in your own website, I wrote a quick <code>markdown-it</code> plugin for it:</p>\n<p>\n<GitHubLink repo=\"antfu/markdown-it-github-alerts\" />\n</p>\n<h3>Vite</h3>\n<p>If you are using <a href=\"https://github.com/unplugin/unplugin-vue-markdown\"><code>unplugin-vue-markdown</code></a>:</p>\n<pre><code class=\"language-ts\">import MarkdownItGitHubAlerts from 'markdown-it-github-alerts'\n// vite.config.ts\nimport Markdown from 'unplugin-vue-markdown/vite'\nimport { defineConfig } from 'vite'\n\nexport default defineConfig({\n  plugins: [\n    Markdown({\n      markdownItSetup(md) {\n        md.use(MarkdownItGitHubAlerts)\n      }\n    })\n  ],\n})\n</code></pre>\n<h3>VitePress</h3>\n<p>If you are using VitePress, you can add this to your <code>.vitepress/config.js</code>:</p>\n<pre><code class=\"language-ts\">import MarkdownItGitHubAlerts from 'markdown-it-github-alerts'\nimport { defineConfig } from 'vitepress'\n\nexport default defineConfig({\n  markdown: {\n    config(md) {\n      md.use(MarkdownItGitHubAlerts)\n    }\n  }\n})\n</code></pre>\n<h3>Nuxt Content</h3>\n<p>Nuxt Content use <a href=\"https://github.com/remarkjs/remark\"><code>remark</code></a> instead of <code>markdown-it</code>, so the plugin won't work yet. I will implement it later if there is demand.</p>\n<h2>Reference</h2>\n<ul>\n<li><a href=\"https://github.com/antfu/antfu.me/commit/72d8dc2fb70bf21582c42d9424337560a7edea6b\">Commit of this blog post and setting it up</a></li>\n<li><a href=\"https://github.com/vuejs/vitepress/issues/3278\">Proposal to VitePress for adding this by default</a></li>\n</ul>\n<blockquote>\n<p>[!IMPORTANT]<br>\nThanks for reading! :)</p>\n</blockquote>\n",
+            "url": "https://antfu.me/posts/github-alerts",
+            "title": "GitHub-style Alerts",
+            "date_modified": "2023-11-30T10:00:00.000Z",
+            "author": {
+                "name": "Anthony Fu",
+                "url": "https://antfu.me"
+            }
+        },
+        {
+            "content_html": "<p>You might found GitHub sometimes shows you a commit with multiple authors. This is commonly happening in squashed pull requests when multiple people are involved with the reviewing and made suggestions or changes. In that situation, GitHub will automatically inject the <a href=\"https://docs.github.com/en/github/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors\"><code>Co-authored-by:</code></a> to the commit message. This is a great way to give contributors credits while keeping the commit history clean.</p>\n<p>Note that the format is like <code>Co-authored-by: name &lt;name@example.com&gt;</code>, normally GitHub will fill that for you so you don't need to worry about that, but if you want to add it manually, you have to get the email addresses of the contributors. But how do you know their emails?</p>\n<p>Well, technically you can indeed find their email by multiple ways, but actually, you don't need to. The easiest way is to copy their user id and append with <a href=\"https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-email-preferences/setting-your-commit-email-address#about-commit-email-addresses\"><code>@users.noreply.github.com</code></a> that provided by GitHub automatically, for example:</p>\n<pre><code>Co-authored-by: antfu &lt;antfu@users.noreply.github.com&gt;\n</code></pre>\n",
+            "url": "https://antfu.me/posts/github-co-authors",
+            "title": "GitHub Co-authors",
+            "date_modified": "2021-08-24T16:00:00.000Z",
+            "author": {
+                "name": "Anthony Fu",
+                "url": "https://antfu.me"
+            }
+        },
+        {
+            "content_html": "<blockquote>\n<p>Disclaimer: All the words are only representing my opinions. None of them applies to the Windi CSS's author nor the team.</p>\n</blockquote>\n<Tweet>\n<p lang=\"en\" dir=\"ltr\">Congrats Tailwind, and thanks for NOT mentioning Windi CSS at all for your new ideas.<br><br>I appreciated how did Tailwind power my apps and make my life easier. But this really changed my mind about how I see the people behind it.<br><br>Check out <a href=\"https://t.co/kcEzm5Ickp\">https://t.co/kcEzm5Ickp</a> by <a href=\"https://twitter.com/satireven?ref_src=twsrc%5Etfw\">@satireven</a>. <a href=\"https://t.co/tkJCy8Pgb3\">https://t.co/tkJCy8Pgb3</a></p>&mdash; Anthony Fu (@antfu7) <a href=\"https://twitter.com/antfu7/status/1371533878800748545?ref_src=twsrc%5Etfw\">March 15, 2021</a>\n</Tweet>\n<p>I spoke out for <a href=\"https://github.com/windicss/windicss\">Windi CSS</a> just because keeping silence on this also means we are encouraging such things to happen again in the open-source community.</p>\n<p>Tailwind was once my favorite CSS framework and I was really happy to see we made it works on Vite <a href=\"https://twitter.com/antfu7/status/1361398324587163648\">much faster</a> with <a href=\"https://github.com/voorjaar\">@voorjaar</a>'s astonishing Windi CSS compiler. But I was totally unexpected to see that end up being like this. Don't get me wrong, it's great to see Tailwind's long pain get solved officially with Tailwind JIT and benefit the community. What I am saying is that Tailwind used/inspired by Windi's idea <strong>without even mentioning Windi CSS once and claiming it's their own ideas</strong> (until 20min after my tweets about that, <a href=\"https://twitter.com/adamwathan/status/1371542711086559237?s=20\">they appended two tweets in the comments</a>, mentioned about Windi but still implies it's their idea. That's all we got). No official reply of this whole thing, not updates to their repo's README, at all.</p>\n<p>I don't want to speculate what's the reasons or motivations behind it, all I know is that <strong>I will not use any products from Tailwind Labs anymore</strong>. If you think I was reacting too much or it was not a big deal, then I truly wish such things would never happend on you once again.</p>\n<Tweet>\n<p lang=\"en\" dir=\"ltr\">I remember the day when Windi got blown up on Twitter, <a href=\"https://twitter.com/adamwathan?ref_src=twsrc%5Etfw\">@adamwathan</a> called me and asked me about how Windi CSS works and he is happy to make it official. And yeah, I was excited to see things are improving for the whole community, so I shared all I know with him.<br><br>1/n <a href=\"https://t.co/Ho1DddqA33\">https://t.co/Ho1DddqA33</a></p>&mdash; Anthony Fu (@antfu7) <a href=\"https://twitter.com/antfu7/status/1371538602488786945?ref_src=twsrc%5Etfw\">March 15, 2021</a>\n</Tweet>\n<Tweet>\n<p lang=\"en\" dir=\"ltr\">It&#39;s almost impossible for a small org like us to fight with the giant Tailwind. But we will not give up just because of this.<br><br>Let&#39;s see and good luck.</p>&mdash; Anthony Fu (@antfu7) <a href=\"https://twitter.com/antfu7/status/1371538609388494852?ref_src=twsrc%5Etfw\">March 15, 2021</a>\n</Tweet>\n<p>On the bright side, Windi pushed Tailwind to make the JIT and improved the DX and Tailwind forced Windi to be independent and evolving to not being a &quot;Tailwind accessory&quot; any longer.</p>\n<p>There is another community based CSS-in-JS alternative called <a href=\"https://github.com/tw-in-js/twind\">Twind</a>, which you definitely want to check out (they are working closely with Windi to bring an uniformed community standard/spec of our DSL, cheers <a href=\"https://github.com/sastan\">@sastan</a>!).</p>\n<p>As for myself, I will spend more time on working with Windi CSS to make it even better. Here is some of exciting things we are working on:</p>\n<Tweet>\n<p lang=\"en\" dir=\"ltr\">Spoiler of the new piece of our playground - interactive selector.<br><br>I always find myself trouble picking the directions of rounded corners and looking up for a huge table of all the possible combinations could be inefficient. So yeah :)<br><br>rounded-1/2 is new in Windi CSS btw 😉 <a href=\"https://t.co/f841k9BgPF\">https://t.co/f841k9BgPF</a> <a href=\"https://t.co/pVIlB2X1nY\">pic.twitter.com/pVIlB2X1nY</a></p>&mdash; Anthony Fu (@antfu7) <a href=\"https://twitter.com/antfu7/status/1371779599084888064?ref_src=twsrc%5Etfw\">March 16, 2021</a>\n</Tweet>\n<Tweet>\n<p lang=\"en\" dir=\"ltr\">Limitation? Let&#39;s break it!💥<br><br>Upcoming feature in <a href=\"https://twitter.com/windi_css?ref_src=twsrc%5Etfw\">@windi_css</a> 🍃<br>&quot;Design in DevTools&quot;!<br><br>Whenever you made changes to the classes in DevTools, the CSS updates automatically for you, on-demand as always :)<br><br>Idea credit goes to <a href=\"https://twitter.com/MaximoMussini?ref_src=twsrc%5Etfw\">@maximomussini</a> 🙌 <a href=\"https://t.co/DHf2h5wroM\">pic.twitter.com/DHf2h5wroM</a></p>&mdash; Anthony Fu (@antfu7) <a href=\"https://twitter.com/antfu7/status/1372244287975387145?ref_src=twsrc%5Etfw\">March 17, 2021</a>\n</Tweet>\n<p>Thanks for reading though. Don't feel any pressure about using any tools that you needed. I choose not to use them just because my personal preference. I don't want to force anyone to switch their stack because reading this post, we will keep improve it and show you which is the better one you should use :)</p>\n",
+            "url": "https://antfu.me/posts/windicss-and-tailwind-jit",
+            "title": "Windi CSS and Tailwind JIT",
+            "summary": "Wish this is the end.",
+            "date_modified": "2021-03-18T16:00:00.000Z",
+            "author": {
+                "name": "Anthony Fu",
+                "url": "https://antfu.me"
+            }
+        }
+    ]
+}
