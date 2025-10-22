@@ -36,6 +36,8 @@ declare module 'vue-router/auto-routes' {
     '/posts/github-co-authors': RouteRecordInfo<'/posts/github-co-authors', '/posts/github-co-authors', Record<never, never>, Record<never, never>>,
     '/posts/leetcode/': RouteRecordInfo<'/posts/leetcode/', '/posts/leetcode', Record<never, never>, Record<never, never>>,
     '/posts/leetcode/lc01': RouteRecordInfo<'/posts/leetcode/lc01', '/posts/leetcode/lc01', Record<never, never>, Record<never, never>>,
+    '/posts/notes/': RouteRecordInfo<'/posts/notes/', '/posts/notes', Record<never, never>, Record<never, never>>,
+    '/posts/notes/cqwm': RouteRecordInfo<'/posts/notes/cqwm', '/posts/notes/cqwm', Record<never, never>, Record<never, never>>,
     '/posts/photos-page': RouteRecordInfo<'/posts/photos-page', '/posts/photos-page', Record<never, never>, Record<never, never>>,
     '/posts/sub_posts_test/inner': RouteRecordInfo<'/posts/sub_posts_test/inner', '/posts/sub_posts_test/inner', Record<never, never>, Record<never, never>>,
     '/posts/sub_posts_test/missing-semester': RouteRecordInfo<'/posts/sub_posts_test/missing-semester', '/posts/sub_posts_test/missing-semester', Record<never, never>, Record<never, never>>,
@@ -131,6 +133,14 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/leetcode/lc01.md': {
       routes: '/posts/leetcode/lc01'
+      views: never
+    }
+    'pages/posts/notes/index.md': {
+      routes: '/posts/notes/'
+      views: never
+    }
+    'pages/posts/notes/cqwm.md': {
+      routes: '/posts/notes/cqwm'
       views: never
     }
     'pages/posts/photos-page.md': {

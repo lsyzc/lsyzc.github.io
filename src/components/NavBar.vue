@@ -48,6 +48,10 @@ const { y: scroll } = useWindowScroll()
           <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
         </RouterLink>
+        <RouterLink to="/posts/notes" title="Notes">
+          <span class="lt-md:hidden">Notes</span>
+          <div i-material-symbols:edit-note-rounded class="md:hidden" />
+        </RouterLink>
         <!-- <RouterLink to="/talks" class="lt-md:hidden" title="Talks">
           Talks
         </RouterLink> -->
