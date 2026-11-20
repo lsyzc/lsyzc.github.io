@@ -49,6 +49,46 @@ html:not(.dark) .shiki span {
   margin: 0.5em 0;
 }
 
+/* Blog reading layout. Original shared styles remain above and in prose.css.
+   Remove this block and the post-reading bindings in WrapperPost.vue to revert.
+   Original: --prose-max-width: 65ch; body line-height: 1.75;
+   code font-size: 0.92em; line-height: 1.4; width: auto. */
+.post-reading {
+  --prose-max-width: 760px;
+}
+
+.post-reading .prose {
+  line-height: 1.8;
+}
+
+.post-reading .prose .shiki {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Original TOC: shown from lg (1024px), 200px wide; 300px from xl.
+   Keep the wider reading column clear and reserve a gap beside the TOC. */
+.post-reading .table-of-contents {
+  display: none;
+  width: min(260px, calc((100vw - 760px) / 2 - 48px));
+}
+
+@media (min-width: 1280px) {
+  .post-reading .table-of-contents {
+    display: flex;
+  }
+}
+
+/* Expand code to the right on desktop, keeping its left edge aligned with
+   the text and clear of the TOC. Preserve the original horizontal scrolling.
+   The viewport cap leaves the existing 28px page gutter intact. */
+@media (min-width: 1100px) {
+  .post-reading .prose .shiki {
+    width: min(1000px, calc(100% + (100vw - 100%) / 2 - 28px));
+    max-width: none;
+  }
+}
+
 .prose img {
   width: 100%;
 }

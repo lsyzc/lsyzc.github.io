@@ -42,6 +42,8 @@ export default defineConfig({
       '@vueuse/core',
       'dayjs',
       'dayjs/plugin/localizedFormat',
+      // Mermaid 的 CommonJS 依赖需要 Vite 预打包；原 include 列表保留。
+      'mermaid',
     ],
   },
   plugins: [
@@ -70,6 +72,9 @@ export default defineConfig({
     }),
 
     Markdown({
+      // 原默认 include: /\.md$|\.md\?vue/ 会把 Vue 脚本子请求再次当成 Markdown。
+      // 只转换源文件，避免生产构建时重复包装组件；回退时移除此 include。
+      include: /\.md$/,
       wrapperComponent: id => id.includes('/demo/')
         ? 'WrapperDemo'
         : 'WrapperPost',
@@ -101,6 +106,17 @@ export default defineConfig({
             transformerNotationWordHighlight(),
           ],
         }))
+
+        // 原有 fence 渲染逻辑保留；移除此覆盖即可恢复 Mermaid 为代码块。
+        const renderFence = md.renderer.rules.fence!
+        md.renderer.rules.fence = (tokens, index, options, env, renderer) => {
+          const token = tokens[index]
+          if (token.info.trim() === 'mermaid') {
+            const source = md.utils.escapeHtml(JSON.stringify(token.content))
+            return `<MermaidDiagram :source="${source}" />\n`
+          }
+          return renderFence(tokens, index, options, env, renderer)
+        }
 
         md.use(anchor, {
           slugify,

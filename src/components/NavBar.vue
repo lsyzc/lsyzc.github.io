@@ -17,12 +17,12 @@ const { y: scroll } = useWindowScroll()
       focusable="false"
     >
       <!-- <Logo /> -->
-       <img
-    src="/saturntu.png"
-    alt="Logo"
-    style="border-radius: 50%;"
-    class="w-full h-full object-contain"
-  />
+      <img
+        src="/saturntu.png"
+        alt="Logo"
+        style="border-radius: 50%;"
+        class="w-full h-full object-contain"
+      >
     </RouterLink>
     <button
       title="Scroll to top"
@@ -40,10 +40,10 @@ const { y: scroll } = useWindowScroll()
           <span class="lt-md:hidden">Blog</span>
           <div i-ri-article-line md:hidden />
         </RouterLink>
-                <RouterLink to="/posts/leetcode" title="Leetcode">
+        <!-- <RouterLink to="/posts/leetcode" title="Leetcode">
           <span class="lt-md:hidden">Leetcode</span>
           <div i-tabler:brand-leetcode class="md:hidden" />
-        </RouterLink>
+        </RouterLink> -->
         <RouterLink to="/projects" title="Projects">
           <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
@@ -71,9 +71,9 @@ const { y: scroll } = useWindowScroll()
         <!-- <RouterLink to="leetcode" title="leetcode">
           <div i-simple-icons:leetcode />
         </RouterLink> -->
-        <a href="https://leetcode.cn/u/litutu/" target="_blank" title="Leetcode" class="lt-md:hidden">
+        <!-- <a href="https://leetcode.cn/u/litutu/" target="_blank" title="Leetcode" class="lt-md:hidden">
           <div i-simple-icons:leetcode />
-        </a>
+        </a> -->
         <!-- <RouterLink to="/chat" title="Let's Chat">
           <div i-ri-chat-1-line />
         </RouterLink> -->

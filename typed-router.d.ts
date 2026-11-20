@@ -34,6 +34,8 @@ declare module 'vue-router/auto-routes' {
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/github-alerts': RouteRecordInfo<'/posts/github-alerts', '/posts/github-alerts', Record<never, never>, Record<never, never>>,
     '/posts/github-co-authors': RouteRecordInfo<'/posts/github-co-authors', '/posts/github-co-authors', Record<never, never>, Record<never, never>>,
+    '/posts/java-concurrency-chapter-by-chapter': RouteRecordInfo<'/posts/java-concurrency-chapter-by-chapter', '/posts/java-concurrency-chapter-by-chapter', Record<never, never>, Record<never, never>>,
+    '/posts/java-concurrency-from-state-to-execution': RouteRecordInfo<'/posts/java-concurrency-from-state-to-execution', '/posts/java-concurrency-from-state-to-execution', Record<never, never>, Record<never, never>>,
     '/posts/leetcode/': RouteRecordInfo<'/posts/leetcode/', '/posts/leetcode', Record<never, never>, Record<never, never>>,
     '/posts/leetcode/lc01': RouteRecordInfo<'/posts/leetcode/lc01', '/posts/leetcode/lc01', Record<never, never>, Record<never, never>>,
     '/posts/notes/': RouteRecordInfo<'/posts/notes/', '/posts/notes', Record<never, never>, Record<never, never>>,
@@ -125,6 +127,14 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/github-co-authors.md': {
       routes: '/posts/github-co-authors'
+      views: never
+    }
+    'pages/posts/java-concurrency-chapter-by-chapter.md': {
+      routes: '/posts/java-concurrency-chapter-by-chapter'
+      views: never
+    }
+    'pages/posts/java-concurrency-from-state-to-execution.md': {
+      routes: '/posts/java-concurrency-from-state-to-execution'
       views: never
     }
     'pages/posts/leetcode/index.md': {

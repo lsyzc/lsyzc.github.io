@@ -10,6 +10,7 @@ const { frontmatter } = defineProps({
 
 const router = useRouter()
 const route = useRoute()
+const isBlogPost = computed(() => route.path.startsWith('/posts/'))
 const content = ref<HTMLDivElement>()
 
 const base = 'https://lsyzc.github.io'
@@ -93,11 +94,15 @@ const ArtComponent = computed(() => {
   <ClientOnly v-if="ArtComponent">
     <component :is="ArtComponent" />
   </ClientOnly>
+  <!-- 阅读布局回退：移除 post-reading 绑定即可恢复。原绑定保留如下：
+    标题 :class="[frontmatter.wrapperClass]"
+    正文 :class="[frontmatter.tocAlwaysOn ? 'toc-always-on' : '', frontmatter.class]"
+  -->
   <div
     v-if="frontmatter.display ?? frontmatter.title"
     class="prose m-auto mb-8"
     :lang="frontmatter.lang"
-    :class="[frontmatter.wrapperClass]"
+    :class="[frontmatter.wrapperClass, { 'post-reading': isBlogPost }]"
   >
     <h1 class="mb-0 slide-enter-50">
       {{ frontmatter.display ?? frontmatter.title }}
@@ -133,11 +138,12 @@ const ArtComponent = computed(() => {
   <article
     ref="content"
     :lang="frontmatter.lang"
-    :class="[frontmatter.tocAlwaysOn ? 'toc-always-on' : '', frontmatter.class]"
+    :class="[frontmatter.tocAlwaysOn ? 'toc-always-on' : '', frontmatter.class, { 'post-reading': isBlogPost }]"
   >
     <slot />
   </article>
-  <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden">
+  <!-- 原底部容器没有 :class 绑定，回退时移除下方新增的 :class 即可。 -->
+  <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden" :class="{ 'post-reading': isBlogPost }">
     <template v-if="frontmatter.duration">
       <span font-mono op50>> </span>
       <span op50>comment on </span>
