@@ -35,18 +35,14 @@ declare module 'vue-router/auto-routes' {
     '/posts/github-alerts': RouteRecordInfo<'/posts/github-alerts', '/posts/github-alerts', Record<never, never>, Record<never, never>>,
     '/posts/github-co-authors': RouteRecordInfo<'/posts/github-co-authors', '/posts/github-co-authors', Record<never, never>, Record<never, never>>,
     '/posts/java-concurrency-chapter-by-chapter': RouteRecordInfo<'/posts/java-concurrency-chapter-by-chapter', '/posts/java-concurrency-chapter-by-chapter', Record<never, never>, Record<never, never>>,
-    '/posts/java-concurrency-from-state-to-execution': RouteRecordInfo<'/posts/java-concurrency-from-state-to-execution', '/posts/java-concurrency-from-state-to-execution', Record<never, never>, Record<never, never>>,
     '/posts/leetcode/': RouteRecordInfo<'/posts/leetcode/', '/posts/leetcode', Record<never, never>, Record<never, never>>,
     '/posts/leetcode/lc01': RouteRecordInfo<'/posts/leetcode/lc01', '/posts/leetcode/lc01', Record<never, never>, Record<never, never>>,
+    '/posts/mysql-mvcc': RouteRecordInfo<'/posts/mysql-mvcc', '/posts/mysql-mvcc', Record<never, never>, Record<never, never>>,
     '/posts/notes/': RouteRecordInfo<'/posts/notes/', '/posts/notes', Record<never, never>, Record<never, never>>,
     '/posts/notes/cqwm': RouteRecordInfo<'/posts/notes/cqwm', '/posts/notes/cqwm', Record<never, never>, Record<never, never>>,
     '/posts/photos-page': RouteRecordInfo<'/posts/photos-page', '/posts/photos-page', Record<never, never>, Record<never, never>>,
     '/posts/sub_posts_test/inner': RouteRecordInfo<'/posts/sub_posts_test/inner', '/posts/sub_posts_test/inner', Record<never, never>, Record<never, never>>,
     '/posts/sub_posts_test/missing-semester': RouteRecordInfo<'/posts/sub_posts_test/missing-semester', '/posts/sub_posts_test/missing-semester', Record<never, never>, Record<never, never>>,
-    '/posts/test': RouteRecordInfo<'/posts/test', '/posts/test', Record<never, never>, Record<never, never>>,
-    '/posts/test-og-update': RouteRecordInfo<'/posts/test-og-update', '/posts/test-og-update', Record<never, never>, Record<never, never>>,
-    '/posts/testsecond': RouteRecordInfo<'/posts/testsecond', '/posts/testsecond', Record<never, never>, Record<never, never>>,
-    '/posts/windicss-and-tailwind-jit': RouteRecordInfo<'/posts/windicss-and-tailwind-jit', '/posts/windicss-and-tailwind-jit', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
     '/sponsors-list': RouteRecordInfo<'/sponsors-list', '/sponsors-list', Record<never, never>, Record<never, never>>,
     '/streams': RouteRecordInfo<'/streams', '/streams', Record<never, never>, Record<never, never>>,
@@ -133,16 +129,16 @@ declare module 'vue-router/auto-routes' {
       routes: '/posts/java-concurrency-chapter-by-chapter'
       views: never
     }
-    'pages/posts/java-concurrency-from-state-to-execution.md': {
-      routes: '/posts/java-concurrency-from-state-to-execution'
-      views: never
-    }
     'pages/posts/leetcode/index.md': {
       routes: '/posts/leetcode/'
       views: never
     }
     'pages/posts/leetcode/lc01.md': {
       routes: '/posts/leetcode/lc01'
+      views: never
+    }
+    'pages/posts/mysql-mvcc.md': {
+      routes: '/posts/mysql-mvcc'
       views: never
     }
     'pages/posts/notes/index.md': {
@@ -163,22 +159,6 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/sub_posts_test/missing-semester.md': {
       routes: '/posts/sub_posts_test/missing-semester'
-      views: never
-    }
-    'pages/posts/test.md': {
-      routes: '/posts/test'
-      views: never
-    }
-    'pages/posts/test-og-update.md': {
-      routes: '/posts/test-og-update'
-      views: never
-    }
-    'pages/posts/testsecond.md': {
-      routes: '/posts/testsecond'
-      views: never
-    }
-    'pages/posts/windicss-and-tailwind-jit.md': {
-      routes: '/posts/windicss-and-tailwind-jit'
       views: never
     }
     'pages/projects.md': {
